@@ -1,0 +1,580 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dearborn Heights Auto Clinic - Professional Auto Repair & Mobile Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e3a8a',
+                        secondary: '#64748b',
+                        accent: '#3b82f6',
+                        success: '#10b981',
+                        automotive: {
+                            blue: '#1e3a8a',
+                            silver: '#94a3b8',
+                            steel: '#64748b'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- @COMPONENT: Header -->
+    <header class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center">
+                        <i class="fas fa-wrench text-2xl text-primary mr-3"></i>
+                        <div>
+                            <h1 class="text-xl font-bold text-gray-900">Dearborn Heights Auto Clinic</h1>
+                            <p class="text-xs text-gray-600">Serving Michigan Since 1986</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="tel:3132925120" class="flex items-center text-primary hover:text-accent transition-colors">
+                        <i class="fas fa-phone mr-2"></i>
+                        <span class="font-medium">(313) 292-5120</span>
+                    </a>
+                    <button class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-accent transition-colors">
+                        Emergency Service
+                    </button>
+                </div>
+                <button class="md:hidden text-gray-600">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- @END_COMPONENT: Header -->
+
+    <!-- @COMPONENT: Hero Section -->
+    <section class="bg-gradient-to-br from-primary to-accent text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl lg:text-5xl font-bold mb-6">
+                        Professional Auto Repair
+                        <span class="block text-automotive-silver">39+ Years of Excellence</span>
+                    </h2>
+                    <p class="text-xl mb-8 text-blue-100">
+                        Mobile auto repair services and complete automotive solutions in Dearborn Heights, Michigan. From brake services to engine repair - we've got you covered.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button data-event="click:scrollToBooking" class="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                            Book Appointment
+                        </button>
+                        <a href="tel:3132925120" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition-colors text-center">
+                            Call Now: (313) 292-5120
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <!-- Professional automotive workshop with mechanics working on cars -->
+                    <img src="https://pixabay.com/get/g88721ccd49190e2336e748b2e2e96936e017dec958e098fc922b0024686d8f46242ce405901f4bbc28eac2fa20b7a8fb1fcbc2cc00286ac04a81036ebefa4af0_1280.jpg" alt="Professional automotive repair shop" class="rounded-xl shadow-2xl w-full h-auto" />
+                    <div class="absolute -bottom-6 -left-6 bg-white rounded-lg p-4 shadow-lg">
+                        <div class="text-primary text-sm font-semibold">Established</div>
+                        <div class="text-2xl font-bold text-gray-900">1986</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Hero Section -->
+
+    <!-- @COMPONENT: Services Overview -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold text-gray-900 mb-4">Our Professional Services</h3>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Complete automotive solutions with mobile service options throughout Dearborn Heights and surrounding Michigan areas.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service cards with data binding for real service data -->
+                <div class="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold text-gray-900 mb-3">Mobile Auto Repair</h4>
+                    <p class="text-gray-600 mb-4">We come to you! Professional mobile repair services at your location throughout Dearborn Heights area.</p>
+                    <div class="text-accent font-medium">On-site service available</div>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold text-gray-900 mb-3">Brake Services & Repairs</h4>
+                    <p class="text-gray-600 mb-4">Complete brake system diagnostics, repairs, and replacements for all vehicle makes and models.</p>
+                    <div class="text-accent font-medium">Safety first approach</div>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold text-gray-900 mb-3">Engine Repair & Diagnostics</h4>
+                    <p class="text-gray-600 mb-4">Advanced diagnostic equipment and expert engine repair services for optimal vehicle performance.</p>
+                    <div class="text-accent font-medium">Latest diagnostic tools</div>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold text-gray-900 mb-3">Wheel Alignment</h4>
+                    <p class="text-gray-600 mb-4">Precision wheel alignment services to ensure proper tire wear and vehicle handling.</p>
+                    <div class="text-accent font-medium">Precision guaranteed</div>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold text-gray-900 mb-3">General Automotive Repair</h4>
+                    <p class="text-gray-600 mb-4">Comprehensive automotive maintenance and repair services for all your vehicle needs.</p>
+                    <div class="text-accent font-medium">Complete solutions</div>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold text-gray-900 mb-3">Custom Auto Work</h4>
+                    <p class="text-gray-600 mb-4">Specialized custom automotive work and modifications to meet your unique requirements.</p>
+                    <div class="text-accent font-medium">Personalized service</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Services Overview -->
+
+    <!-- @COMPONENT: Appointment Booking System -->
+    <section id="booking" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold text-gray-900 mb-4">Schedule Your Appointment</h3>
+                <p class="text-lg text-gray-600">Choose between shop service or mobile repair at your location</p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Service Type Selection -->
+                <div class="lg:col-span-1">
+                    <div class="bg-white rounded-xl p-6 shadow-lg">
+                        <h4 class="text-xl font-semibold text-gray-900 mb-6">Service Options</h4>
+                        
+                        <!-- @STATE: serviceType:string = 'shop' -->
+                        <div class="space-y-4 mb-6">
+                            <label class="flex items-center p-4 border-2 border-primary rounded-lg cursor-pointer bg-blue-50">
+                                <input type="radio" name="serviceType" value="shop" class="text-primary" checked data-mock="true">
+                                <div class="ml-3">
+                                    <div class="font-semibold text-gray-900">Shop Service</div>
+                                    <div class="text-sm text-gray-600">Bring your vehicle to our facility</div>
+                                    <div class="text-xs text-gray-500 mt-1">4843 S Telegraph Rd, Dearborn Heights</div>
+                                </div>
+                            </label>
+
+                            <label class="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-primary transition-colors">
+                                <input type="radio" name="serviceType" value="mobile" class="text-primary" data-mock="true">
+                                <div class="ml-3">
+                                    <div class="font-semibold text-gray-900">Mobile Service</div>
+                                    <div class="text-sm text-gray-600">We come to your location</div>
+                                    <div class="text-xs text-gray-500 mt-1">Available in Dearborn Heights area</div>
+                                </div>
+                            </label>
+                        </div>
+
+                        <h5 class="font-semibold text-gray-900 mb-4">Select Service</h5>
+                        <div class="space-y-2">
+                            <!-- @MAP: services.map(service => ( -->
+                            <label class="flex items-center p-3 hover:bg-gray-50 rounded-lg cursor-pointer">
+                                <input type="checkbox" class="text-primary rounded" data-mock="true">
+                                <span class="ml-3 text-gray-700" data-bind="service.name">Mobile Auto Repair</span>
+                                <span class="ml-auto text-sm text-gray-500" data-bind="service.duration">2-3 hours</span>
+                            </label>
+                            <label class="flex items-center p-3 hover:bg-gray-50 rounded-lg cursor-pointer">
+                                <input type="checkbox" class="text-primary rounded" data-mock="true">
+                                <span class="ml-3 text-gray-700">Brake Services & Repairs</span>
+                                <span class="ml-auto text-sm text-gray-500">1-2 hours</span>
+                            </label>
+                            <label class="flex items-center p-3 hover:bg-gray-50 rounded-lg cursor-pointer">
+                                <input type="checkbox" class="text-primary rounded" data-mock="true">
+                                <span class="ml-3 text-gray-700">Wheel Alignment</span>
+                                <span class="ml-auto text-sm text-gray-500">1 hour</span>
+                            </label>
+                            <label class="flex items-center p-3 hover:bg-gray-50 rounded-lg cursor-pointer">
+                                <input type="checkbox" class="text-primary rounded" data-mock="true">
+                                <span class="ml-3 text-gray-700">Engine Repair & Diagnostics</span>
+                                <span class="ml-auto text-sm text-gray-500">2-4 hours</span>
+                            </label>
+                            <label class="flex items-center p-3 hover:bg-gray-50 rounded-lg cursor-pointer">
+                                <input type="checkbox" class="text-primary rounded" data-mock="true">
+                                <span class="ml-3 text-gray-700">General Automotive Repair</span>
+                                <span class="ml-auto text-sm text-gray-500">1-3 hours</span>
+                            </label>
+                            <!-- @END_MAP )) -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Calendar System -->
+                <div class="lg:col-span-1">
+                    <div class="bg-white rounded-xl p-6 shadow-lg">
+                        <h4 class="text-xl font-semibold text-gray-900 mb-6">Select Date & Time</h4>
+                        
+                        <!-- Calendar Header -->
+                        <div class="flex items-center justify-between mb-6">
+                            <h5 class="text-lg font-semibold text-gray-900" data-bind="currentMonth">January 2025</h5>
+                            <div class="flex space-x-2">
+                                <button class="p-2 hover:bg-gray-100 rounded-lg" data-event="click:previousMonth">
+                                    <i class="fas fa-chevron-left text-gray-600"></i>
+                                </button>
+                                <button class="p-2 hover:bg-gray-100 rounded-lg" data-event="click:nextMonth">
+                                    <i class="fas fa-chevron-right text-gray-600"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Calendar Grid -->
+                        <div class="grid grid-cols-7 gap-1 mb-6">
+                            <div class="text-center text-sm font-medium text-gray-500 py-2">Sun</div>
+                            <div class="text-center text-sm font-medium text-gray-500 py-2">Mon</div>
+                            <div class="text-center text-sm font-medium text-gray-500 py-2">Tue</div>
+                            <div class="text-center text-sm font-medium text-gray-500 py-2">Wed</div>
+                            <div class="text-center text-sm font-medium text-gray-500 py-2">Thu</div>
+                            <div class="text-center text-sm font-medium text-gray-500 py-2">Fri</div>
+                            <div class="text-center text-sm font-medium text-gray-500 py-2">Sat</div>
+                            
+                            <!-- @MAP: calendarDays.map(day => ( -->
+                            <button class="h-10 text-sm rounded-lg hover:bg-gray-100 text-gray-900 font-medium" data-event="click:selectDate" data-mock="true">1</button>
+                            <button class="h-10 text-sm rounded-lg hover:bg-gray-100 text-gray-900" data-mock="true">2</button>
+                            <button class="h-10 text-sm rounded-lg hover:bg-gray-100 text-gray-900" data-mock="true">3</button>
+                            <button class="h-10 text-sm rounded-lg hover:bg-gray-100 text-gray-900" data-mock="true">4</button>
+                            <button class="h-10 text-sm rounded-lg hover:bg-gray-100 text-gray-900" data-mock="true">5</button>
+                            <button class="h-10 text-sm rounded-lg hover:bg-gray-100 text-gray-900" data-mock="true">6</button>
+                            <button class="h-10 text-sm rounded-lg bg-gray-200 text-gray-400 cursor-not-allowed" data-mock="true">7</button>
+                            <button class="h-10 text-sm rounded-lg hover:bg-gray-100 text-gray-900" data-mock="true">8</button>
+                            <button class="h-10 text-sm rounded-lg hover:bg-gray-100 text-gray-900" data-mock="true">9</button>
+                            <button class="h-10 text-sm rounded-lg hover:bg-gray-100 text-gray-900" data-mock="true">10</button>
+                            <button class="h-10 text-sm rounded-lg hover:bg-gray-100 text-gray-900" data-mock="true">11</button>
+                            <button class="h-10 text-sm rounded-lg hover:bg-gray-100 text-gray-900" data-mock="true">12</button>
+                            <button class="h-10 text-sm rounded-lg hover:bg-gray-100 text-gray-900" data-mock="true">13</button>
+                            <button class="h-10 text-sm rounded-lg bg-gray-200 text-gray-400 cursor-not-allowed" data-mock="true">14</button>
+                            <button class="h-10 text-sm rounded-lg bg-primary text-white" data-mock="true">15</button>
+                            <button class="h-10 text-sm rounded-lg hover:bg-gray-100 text-gray-900" data-mock="true">16</button>
+                            <button class="h-10 text-sm rounded-lg hover:bg-gray-100 text-gray-900" data-mock="true">17</button>
+                            <button class="h-10 text-sm rounded-lg hover:bg-gray-100 text-gray-900" data-mock="true">18</button>
+                            <button class="h-10 text-sm rounded-lg hover:bg-gray-100 text-gray-900" data-mock="true">19</button>
+                            <button class="h-10 text-sm rounded-lg hover:bg-gray-100 text-gray-900" data-mock="true">20</button>
+                            <button class="h-10 text-sm rounded-lg bg-gray-200 text-gray-400 cursor-not-allowed" data-mock="true">21</button>
+                            <!-- @END_MAP )) -->
+                        </div>
+
+                        <!-- Business Hours Display -->
+                        <div class="border-t pt-4">
+                            <h6 class="font-medium text-gray-900 mb-3">Available Time Slots</h6>
+                            <div class="text-sm text-gray-600 mb-3">
+                                <div class="flex justify-between"><span>Mon-Fri:</span><span>8:00 AM - 6:00 PM</span></div>
+                                <div class="flex justify-between"><span>Saturday:</span><span>9:00 AM - 3:00 PM</span></div>
+                                <div class="flex justify-between"><span>Sunday:</span><span>Closed</span></div>
+                            </div>
+                            
+                            <!-- Time Slot Selection -->
+                            <div class="grid grid-cols-2 gap-2">
+                                <button class="p-2 text-sm border border-gray-200 rounded-lg hover:border-primary hover:bg-blue-50 transition-colors" data-mock="true">8:00 AM</button>
+                                <button class="p-2 text-sm border border-gray-200 rounded-lg hover:border-primary hover:bg-blue-50 transition-colors" data-mock="true">10:00 AM</button>
+                                <button class="p-2 text-sm border border-gray-200 rounded-lg hover:border-primary hover:bg-blue-50 transition-colors" data-mock="true">1:00 PM</button>
+                                <button class="p-2 text-sm bg-primary text-white rounded-lg" data-mock="true">3:00 PM</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Customer Information Form -->
+                <div class="lg:col-span-1">
+                    <div class="bg-white rounded-xl p-6 shadow-lg">
+                        <h4 class="text-xl font-semibold text-gray-900 mb-6">Customer & Vehicle Details</h4>
+                        
+                        <form class="space-y-4" data-event="submit:handleBookingSubmission">
+                            <!-- Customer Information -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
+                                <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="John Smith" data-bind="customer.name" data-mock="true">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number *</label>
+                                <input type="tel" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="(313) 555-0123" data-bind="customer.phone" data-mock="true">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                                <input type="email" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="john@example.com" data-bind="customer.email" data-mock="true">
+                            </div>
+
+                            <!-- Vehicle Information -->
+                            <div class="border-t pt-4">
+                                <h5 class="font-medium text-gray-900 mb-4">Vehicle Information</h5>
+                                
+                                <div class="grid grid-cols-2 gap-3">
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-2">Year *</label>
+                                        <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="2020" data-bind="vehicle.year" data-mock="true">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-2">Make *</label>
+                                        <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Honda" data-bind="vehicle.make" data-mock="true">
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Model *</label>
+                                    <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Civic" data-bind="vehicle.model" data-mock="true">
+                                </div>
+
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">License Plate</label>
+                                    <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="ABC1234" data-bind="vehicle.licensePlate" data-mock="true">
+                                </div>
+                            </div>
+
+                            <!-- Mobile Service Location -->
+                            <div class="border-t pt-4" id="mobileLocationSection" style="display: none;">
+                                <h5 class="font-medium text-gray-900 mb-4">Service Location</h5>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Address *</label>
+                                    <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="123 Main St, Dearborn Heights, MI" data-bind="serviceLocation.address" data-mock="true">
+                                </div>
+                                <div class="text-sm text-gray-600 mt-2">
+                                    <i class="fas fa-info-circle mr-1"></i>
+                                    Mobile service available within 15 miles of our shop
+                                </div>
+                            </div>
+
+                            <!-- Additional Notes -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Additional Notes</label>
+                                <textarea class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" rows="3" placeholder="Describe any symptoms or specific concerns..." data-bind="appointment.notes" data-mock="true"></textarea>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button type="submit" class="w-full bg-primary text-white py-3 rounded-lg font-semibold hover:bg-accent transition-colors" data-implementation="Should validate form and create appointment">
+                                Schedule Appointment
+                            </button>
+
+                            <div class="text-center text-sm text-gray-600 mt-4">
+                                <i class="fas fa-shield-alt mr-1"></i>
+                                Your information is secure and protected
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Appointment Booking System -->
+
+    <!-- @COMPONENT: Business Information -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-3xl font-bold text-gray-900 mb-6">Trusted Auto Repair Since 1986</h3>
+                    <p class="text-lg text-gray-600 mb-6">
+                        For nearly four decades, Dearborn Heights Auto Clinic has been the trusted choice for automotive repair and maintenance in Michigan. Our experienced technicians provide professional service you can count on.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="bg-primary/10 p-3 rounded-lg mr-4">
+                                <i class="fas fa-map-marker-alt text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-gray-900">Our Location</div>
+                                <div class="text-gray-600">4843 S Telegraph Rd, Dearborn Heights, MI 48125</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center">
+                            <div class="bg-primary/10 p-3 rounded-lg mr-4">
+                                <i class="fas fa-phone text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-gray-900">Contact Numbers</div>
+                                <div class="text-gray-600">
+                                    (313) 292-5120 | (313) 292-5121
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center">
+                            <div class="bg-primary/10 p-3 rounded-lg mr-4">
+                                <i class="fas fa-clock text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-gray-900">Business Hours</div>
+                                <div class="text-gray-600">
+                                    Mon-Fri: 8:00 AM - 6:00 PM<br>
+                                    Sat: 9:00 AM - 3:00 PM<br>
+                                    Sun: Closed
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <!-- Auto repair shop exterior with professional signage -->
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&h=700" alt="Professional auto repair shop exterior" class="rounded-xl shadow-lg w-full h-auto" />
+                    
+                    <!-- Service Highlights Overlay -->
+                    <div class="absolute -bottom-6 left-6 right-6 bg-white rounded-lg p-4 shadow-xl">
+                        <div class="grid grid-cols-3 gap-4 text-center">
+                            <div>
+                                <div class="text-2xl font-bold text-primary">39+</div>
+                                <div class="text-sm text-gray-600">Years Experience</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-primary">5★</div>
+                                <div class="text-sm text-gray-600">Customer Rating</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-primary">24/7</div>
+                                <div class="text-sm text-gray-600">Emergency Service</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Business Information -->
+
+    <!-- @COMPONENT: Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-wrench text-2xl text-accent mr-3"></i>
+                        <div>
+                            <h4 class="text-xl font-bold">Dearborn Heights Auto Clinic</h4>
+                            <p class="text-gray-400 text-sm">Professional Auto Repair Since 1986</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Trusted automotive repair and mobile services throughout Dearborn Heights and surrounding Michigan areas.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors">
+                            <i class="fab fa-google text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors">
+                            <i class="fab fa-yelp text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h5 class="text-lg font-semibold mb-4">Contact Information</h5>
+                    <div class="space-y-3 text-gray-400">
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-3"></i>
+                            <span>4843 S Telegraph Rd<br>Dearborn Heights, MI 48125</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone mr-3"></i>
+                            <a href="tel:3132925120" class="hover:text-accent transition-colors">(313) 292-5120</a>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone mr-3"></i>
+                            <a href="tel:3132925121" class="hover:text-accent transition-colors">(313) 292-5121</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h5 class="text-lg font-semibold mb-4">Business Hours</h5>
+                    <div class="space-y-2 text-gray-400">
+                        <div class="flex justify-between">
+                            <span>Monday - Friday:</span>
+                            <span>8:00 AM - 6:00 PM</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Saturday:</span>
+                            <span>9:00 AM - 3:00 PM</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Sunday:</span>
+                            <span>Closed</span>
+                        </div>
+                    </div>
+                    <div class="mt-4 p-3 bg-accent/10 rounded-lg">
+                        <div class="text-accent font-semibold text-sm">Emergency Service Available</div>
+                        <div class="text-gray-400 text-sm">Call for urgent automotive needs</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Dearborn Heights Auto Clinic. All rights reserved. | Professional automotive services since 1986</p>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <script>
+        // TODO: Implement calendar functionality, form validation, and appointment booking
+        // TODO: Connect to backend API for appointment management
+        // TODO: Implement service type switching (mobile vs shop)
+        // TODO: Add real-time availability checking
+        // TODO: Database integration for customer and appointment data
+        
+        (function() {
+            // Service type switching
+            const serviceTypeRadios = document.querySelectorAll('input[name="serviceType"]');
+            const mobileLocationSection = document.getElementById('mobileLocationSection');
+            
+            serviceTypeRadios.forEach(radio => {
+                radio.addEventListener('change', function() {
+                    if (this.value === 'mobile') {
+                        mobileLocationSection.style.display = 'block';
+                    } else {
+                        mobileLocationSection.style.display = 'none';
+                    }
+                });
+            });
+
+            // Smooth scrolling for booking button
+            document.querySelector('[data-event="click:scrollToBooking"]')?.addEventListener('click', function() {
+                document.getElementById('booking').scrollIntoView({ 
+                    behavior: 'smooth' 
+                });
+            });
+
+            // Form submission handling
+            document.querySelector('[data-event="submit:handleBookingSubmission"]')?.addEventListener('submit', function(e) {
+                e.preventDefault();
+                // TODO: Implement form validation and API submission
+                alert('Appointment booking functionality will be implemented with backend integration');
+            });
+        })();
+    </script>
+</body>
+</html>
