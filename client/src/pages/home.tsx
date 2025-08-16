@@ -88,7 +88,7 @@ export default function Home() {
                 className="rounded-xl shadow-2xl w-full h-auto"
                 data-testid="img-hero-workshop"
               />
-              <div className="absolute -bottom-6 -left-6 bg-white rounded-lg p-4 shadow-lg">
+              <div className="absolute -bottom-6 -right-6 bg-white rounded-lg p-4 shadow-lg">
                 <div className="text-automotive-blue text-sm font-semibold">Established</div>
                 <div className="text-2xl font-bold text-gray-900" data-testid="text-established-year">1986</div>
               </div>
