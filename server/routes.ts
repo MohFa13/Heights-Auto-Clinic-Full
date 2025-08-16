@@ -10,51 +10,67 @@ import { z } from "zod";
 // Seed data for services
 const defaultServices = [
   {
-    name: "Mobile Auto Repair Services",
-    description: "Complete mobile repair services at your location",
+    name: "Mobile Car Repair",
+    description: "Complete mobile car repair services at your location - we come to you!",
     duration: 180, // 3 hours
     basePrice: "150.00",
     availableForMobile: true,
     isActive: true,
   },
   {
-    name: "Brake Services and Repairs",
-    description: "Complete brake system diagnostics, repairs, and replacements",
+    name: "Brake System Repair",
+    description: "Complete brake system diagnostics, pad/rotor replacement, and brake fluid service",
     duration: 120, // 2 hours
     basePrice: "200.00",
     availableForMobile: true,
     isActive: true,
   },
   {
-    name: "Wheel Alignment Services",
-    description: "Precision wheel alignment for optimal vehicle handling",
+    name: "Wheel Alignment",
+    description: "Precision 4-wheel alignment to prevent tire wear and improve handling",
     duration: 60, // 1 hour
     basePrice: "80.00",
     availableForMobile: false,
     isActive: true,
   },
   {
-    name: "Engine Repair and Diagnostics",
-    description: "Advanced engine diagnostics and repair services",
+    name: "Engine Diagnostics & Repair",
+    description: "Advanced computer diagnostics and engine repair for all makes and models",
     duration: 240, // 4 hours
     basePrice: "300.00",
     availableForMobile: true,
     isActive: true,
   },
   {
-    name: "General Automotive Repair",
-    description: "Comprehensive automotive maintenance and repair",
-    duration: 120, // 2 hours
-    basePrice: "100.00",
+    name: "Oil Change & Maintenance",
+    description: "Full-service oil change, filter replacement, and 21-point inspection",
+    duration: 45, // 45 minutes
+    basePrice: "60.00",
     availableForMobile: true,
     isActive: true,
   },
   {
-    name: "Custom Auto Work",
-    description: "Specialized custom automotive work and modifications",
-    duration: 300, // 5 hours
-    basePrice: "400.00",
+    name: "AC & Heating Service",
+    description: "Air conditioning and heating system repair, recharge, and maintenance",
+    duration: 90, // 1.5 hours
+    basePrice: "120.00",
+    availableForMobile: true,
+    isActive: true,
+  },
+  {
+    name: "Transmission Service",
+    description: "Transmission fluid change, filter replacement, and diagnostic services",
+    duration: 150, // 2.5 hours
+    basePrice: "180.00",
     availableForMobile: false,
+    isActive: true,
+  },
+  {
+    name: "Battery & Electrical",
+    description: "Battery testing, replacement, and electrical system diagnostics",
+    duration: 60, // 1 hour
+    basePrice: "90.00",
+    availableForMobile: true,
     isActive: true,
   },
 ];

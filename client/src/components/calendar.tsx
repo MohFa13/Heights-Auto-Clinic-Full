@@ -57,8 +57,11 @@ export function Calendar({
   const emptyDays = Array.from({ length: firstDay }, (_, i) => i);
 
   return (
-    <div className="bg-white rounded-xl p-6 shadow-lg">
-      <h4 className="text-xl font-semibold text-gray-900 mb-6" data-testid="text-calendar-title">
+    <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+      <h4 className="text-xl font-semibold text-gray-900 mb-6 flex items-center" data-testid="text-calendar-title">
+        <svg className="w-6 h-6 mr-2 text-automotive-blue" fill="currentColor" viewBox="0 0 20 20">
+          <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd"/>
+        </svg>
         Select Date & Time
       </h4>
       
@@ -109,10 +112,10 @@ export function Calendar({
             <button
               key={day}
               className={cn(
-                "h-10 text-sm rounded-lg transition-colors",
-                isSelected && "bg-automotive-blue text-white",
-                !isSelected && !isDisabled && "hover:bg-gray-100 text-gray-900",
-                isDisabled && "text-gray-400 cursor-not-allowed bg-gray-100"
+                "h-10 text-sm rounded-lg transition-all duration-200 font-medium",
+                isSelected && "bg-automotive-blue text-white shadow-md scale-105",
+                !isSelected && !isDisabled && "hover:bg-blue-50 hover:text-automotive-blue text-gray-700 hover:scale-105",
+                isDisabled && "text-gray-300 cursor-not-allowed bg-gray-50"
               )}
               onClick={() => !isDisabled && onDateChange(date)}
               disabled={isDisabled}
@@ -127,21 +130,25 @@ export function Calendar({
       {/* Business Hours */}
       <div className="border-t pt-4">
         <div className="flex items-center mb-3">
-          <Clock className="w-4 h-4 text-gray-500 mr-2" />
+          <div className="bg-gray-100 p-2 rounded-lg mr-3">
+            <Clock className="w-4 h-4 text-gray-600" />
+          </div>
           <h6 className="font-medium text-gray-900">Business Hours</h6>
         </div>
-        <div className="text-sm text-gray-600 mb-4 space-y-1">
-          <div className="flex justify-between">
-            <span>Mon-Fri:</span>
-            <span>8:00 AM - 6:00 PM</span>
-          </div>
-          <div className="flex justify-between">
-            <span>Saturday:</span>
-            <span>9:00 AM - 3:00 PM</span>
-          </div>
-          <div className="flex justify-between">
-            <span>Sunday:</span>
-            <span>Closed</span>
+        <div className="bg-gray-50 rounded-lg p-3 mb-4">
+          <div className="text-sm space-y-2">
+            <div className="flex justify-between items-center">
+              <span className="text-gray-600">Monday - Friday:</span>
+              <span className="font-medium text-gray-900">8:00 AM - 6:00 PM</span>
+            </div>
+            <div className="flex justify-between items-center">
+              <span className="text-gray-600">Saturday:</span>
+              <span className="font-medium text-gray-900">9:00 AM - 3:00 PM</span>
+            </div>
+            <div className="flex justify-between items-center">
+              <span className="text-gray-600">Sunday:</span>
+              <span className="font-medium text-red-600">Closed</span>
+            </div>
           </div>
         </div>
         
@@ -157,10 +164,10 @@ export function Calendar({
                   <button
                     key={slot}
                     className={cn(
-                      "p-2 text-sm border rounded-lg transition-colors",
+                      "p-3 text-sm border rounded-lg transition-all duration-200 font-medium",
                       selectedTime === slot
-                        ? "bg-automotive-blue text-white border-automotive-blue"
-                        : "border-gray-200 hover:border-automotive-blue hover:bg-blue-50"
+                        ? "bg-automotive-blue text-white border-automotive-blue shadow-md scale-105"
+                        : "border-gray-200 hover:border-automotive-blue hover:bg-blue-50 hover:scale-105 text-gray-700"
                     )}
                     onClick={() => onTimeChange(slot)}
                     data-testid={`button-time-${slot}`}

@@ -166,8 +166,11 @@ export function AppointmentForm({
     .map(s => s.name);
 
   return (
-    <div className="bg-white rounded-xl p-6 shadow-lg">
-      <h4 className="text-xl font-semibold text-gray-900 mb-6" data-testid="text-customer-details">
+    <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+      <h4 className="text-xl font-semibold text-gray-900 mb-6 flex items-center" data-testid="text-customer-details">
+        <svg className="w-6 h-6 mr-2 text-automotive-blue" fill="currentColor" viewBox="0 0 20 20">
+          <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd"/>
+        </svg>
         Customer & Vehicle Details
       </h4>
       
@@ -175,8 +178,10 @@ export function AppointmentForm({
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
           {/* Customer Information */}
           <div className="space-y-4">
-            <div className="flex items-center text-sm font-medium text-gray-700 mb-2">
-              <User className="w-4 h-4 mr-2" />
+            <div className="flex items-center text-sm font-semibold text-gray-800 mb-3 bg-blue-50 p-3 rounded-lg">
+              <div className="bg-blue-100 p-2 rounded-lg mr-3">
+                <User className="w-4 h-4 text-blue-600" />
+              </div>
               Customer Information
             </div>
             
@@ -237,9 +242,11 @@ export function AppointmentForm({
           </div>
 
           {/* Vehicle Information */}
-          <div className="border-t pt-4 space-y-4">
-            <div className="flex items-center text-sm font-medium text-gray-700 mb-2">
-              <Car className="w-4 h-4 mr-2" />
+          <div className="border-t pt-6 space-y-4">
+            <div className="flex items-center text-sm font-semibold text-gray-800 mb-3 bg-green-50 p-3 rounded-lg">
+              <div className="bg-green-100 p-2 rounded-lg mr-3">
+                <Car className="w-4 h-4 text-green-600" />
+              </div>
               Vehicle Information
             </div>
             
@@ -320,9 +327,11 @@ export function AppointmentForm({
 
           {/* Mobile Service Location */}
           {showMobileLocation && (
-            <div className="border-t pt-4 space-y-4">
-              <div className="flex items-center text-sm font-medium text-gray-700 mb-2">
-                <MapPin className="w-4 h-4 mr-2" />
+            <div className="border-t pt-6 space-y-4">
+              <div className="flex items-center text-sm font-semibold text-gray-800 mb-3 bg-orange-50 p-3 rounded-lg">
+                <div className="bg-orange-100 p-2 rounded-lg mr-3">
+                  <MapPin className="w-4 h-4 text-orange-600" />
+                </div>
                 Service Location
               </div>
               
@@ -344,9 +353,9 @@ export function AppointmentForm({
                 )}
               />
               
-              <div className="text-sm text-gray-600 flex items-center">
-                <Shield className="w-4 h-4 mr-1" />
-                Mobile service available within 15 miles of our shop
+              <div className="text-sm text-blue-600 flex items-center bg-blue-50 p-3 rounded-lg">
+                <Shield className="w-4 h-4 mr-2" />
+                <span className="font-medium">Mobile service available within 15 miles of our shop</span>
               </div>
             </div>
           )}
@@ -375,9 +384,14 @@ export function AppointmentForm({
 
           {/* Appointment Summary */}
           {(selectedDate || selectedTime || selectedServices.length > 0) && (
-            <div className="border-t pt-4">
-              <h6 className="font-medium text-gray-900 mb-3">Appointment Summary</h6>
-              <div className="bg-gray-50 p-3 rounded-lg text-sm space-y-2">
+            <div className="border-t pt-6">
+              <h6 className="font-semibold text-gray-900 mb-3 flex items-center">
+                <svg className="w-5 h-5 mr-2 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clipRule="evenodd"/>
+                </svg>
+                Appointment Summary
+              </h6>
+              <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 rounded-lg text-sm space-y-3 border border-blue-100">
                 {selectedDate && selectedTime && (
                   <div className="flex justify-between">
                     <span>Date & Time:</span>
@@ -405,18 +419,35 @@ export function AppointmentForm({
           )}
 
           {/* Submit Button */}
-          <Button 
-            type="submit" 
-            className="w-full bg-automotive-blue text-white py-3 hover:bg-accent"
-            disabled={createAppointmentMutation.isPending}
-            data-testid="button-schedule-appointment"
-          >
-            {createAppointmentMutation.isPending ? "Scheduling..." : "Schedule Appointment"}
-          </Button>
+          <div className="space-y-4">
+            <Button 
+              type="submit" 
+              className="w-full bg-gradient-to-r from-automotive-blue to-blue-600 text-white py-4 text-lg font-semibold hover:from-blue-700 hover:to-blue-800 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
+              disabled={createAppointmentMutation.isPending}
+              data-testid="button-schedule-appointment"
+            >
+              {createAppointmentMutation.isPending ? (
+                <div className="flex items-center justify-center">
+                  <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                  Scheduling Your Appointment...
+                </div>
+              ) : (
+                <div className="flex items-center justify-center">
+                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd"/>
+                  </svg>
+                  Schedule My Appointment
+                </div>
+              )}
+            </Button>
 
-          <div className="text-center text-sm text-gray-600 mt-4 flex items-center justify-center">
-            <Shield className="w-4 h-4 mr-1" />
-            Your information is secure and protected
+            <div className="text-center text-sm text-gray-600 flex items-center justify-center bg-gray-50 p-3 rounded-lg">
+              <Shield className="w-4 h-4 mr-2 text-green-600" />
+              <span className="font-medium">Your information is secure and protected with SSL encryption</span>
+            </div>
           </div>
         </form>
       </Form>

@@ -108,80 +108,110 @@ export default function Home() {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow" data-testid="card-service-mobile">
+            <div className="bg-gradient-to-br from-blue-50 to-white rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-blue-100" data-testid="card-service-mobile">
               <div className="text-automotive-blue text-3xl mb-4">
                 <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M15.5 1h-8A2.5 2.5 0 0 0 5 3.5v17A2.5 2.5 0 0 0 7.5 23h8a2.5 2.5 0 0 0 2.5-2.5v-17A2.5 2.5 0 0 0 15.5 1z"/>
+                  <path d="M19 7c0-1.1-.9-2-2-2h-3V4c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v1H3c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2c1.1 0 2-.9 2-2V7zM8 4h4v1H8V4zM8 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm8 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
                 </svg>
               </div>
-              <h4 className="text-xl font-semibold text-gray-900 mb-3">Mobile Auto Repair</h4>
+              <h4 className="text-xl font-semibold text-gray-900 mb-3">Mobile Car Repair</h4>
               <p className="text-gray-600 mb-4">
-                We come to you! Professional mobile repair services at your location throughout Dearborn Heights area.
+                We come to you! Professional mobile car repair services at your home, office, or any location in Dearborn Heights.
               </p>
-              <div className="text-accent font-medium">On-site service available</div>
+              <div className="flex items-center text-green-600 font-medium">
+                <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                </svg>
+                On-site service available
+              </div>
             </div>
 
-            <div className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow" data-testid="card-service-brakes">
-              <div className="text-automotive-blue text-3xl mb-4">
+            <div className="bg-gradient-to-br from-red-50 to-white rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-red-100" data-testid="card-service-brakes">
+              <div className="text-red-600 text-3xl mb-4">
                 <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM8 13H6v-2h2v2zm0-4H6V7h2v2zm4 4h-2v-2h2v2zm0-4h-2V7h2v2zm4 4h-2v-2h2v2zm0-4h-2V7h2v2z"/>
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
                 </svg>
               </div>
-              <h4 className="text-xl font-semibold text-gray-900 mb-3">Brake Services & Repairs</h4>
+              <h4 className="text-xl font-semibold text-gray-900 mb-3">Brake System Repair</h4>
               <p className="text-gray-600 mb-4">
-                Complete brake system diagnostics, repairs, and replacements for all vehicle makes and models.
+                Complete brake system service including pads, rotors, fluid, and safety inspections for all car makes.
               </p>
-              <div className="text-accent font-medium">Safety first approach</div>
-            </div>
-
-            <div className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow" data-testid="card-service-engine">
-              <div className="text-automotive-blue text-3xl mb-4">
-                <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              <div className="flex items-center text-red-600 font-medium">
+                <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd"/>
                 </svg>
+                Safety critical service
               </div>
-              <h4 className="text-xl font-semibold text-gray-900 mb-3">Engine Repair & Diagnostics</h4>
-              <p className="text-gray-600 mb-4">
-                Advanced diagnostic equipment and expert engine repair services for optimal vehicle performance.
-              </p>
-              <div className="text-accent font-medium">Latest diagnostic tools</div>
             </div>
 
-            <div className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow" data-testid="card-service-alignment">
-              <div className="text-automotive-blue text-3xl mb-4">
+            <div className="bg-gradient-to-br from-orange-50 to-white rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-orange-100" data-testid="card-service-engine">
+              <div className="text-orange-600 text-3xl mb-4">
                 <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                 </svg>
               </div>
-              <h4 className="text-xl font-semibold text-gray-900 mb-3">Wheel Alignment</h4>
+              <h4 className="text-xl font-semibold text-gray-900 mb-3">Engine Diagnostics & Repair</h4>
               <p className="text-gray-600 mb-4">
-                Precision wheel alignment services to ensure proper tire wear and vehicle handling.
+                Computer diagnostics, check engine lights, and complete engine repair for all car makes and models.
               </p>
-              <div className="text-accent font-medium">Precision guaranteed</div>
-            </div>
-
-            <div className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow" data-testid="card-service-general">
-              <div className="text-automotive-blue text-3xl mb-4">
-                <Wrench className="w-12 h-12" />
+              <div className="flex items-center text-orange-600 font-medium">
+                <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd"/>
+                </svg>
+                Advanced diagnostics
               </div>
-              <h4 className="text-xl font-semibold text-gray-900 mb-3">General Automotive Repair</h4>
-              <p className="text-gray-600 mb-4">
-                Comprehensive automotive maintenance and repair services for all your vehicle needs.
-              </p>
-              <div className="text-accent font-medium">Complete solutions</div>
             </div>
 
-            <div className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow" data-testid="card-service-custom">
-              <div className="text-automotive-blue text-3xl mb-4">
+            <div className="bg-gradient-to-br from-purple-50 to-white rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-purple-100" data-testid="card-service-alignment">
+              <div className="text-purple-600 text-3xl mb-4">
                 <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18a8 8 0 100-16 8 8 0 000 16zm-1-13h2v6h-2V7zm0 8h2v2h-2v-2z"/>
                 </svg>
               </div>
-              <h4 className="text-xl font-semibold text-gray-900 mb-3">Custom Auto Work</h4>
+              <h4 className="text-xl font-semibold text-gray-900 mb-3">4-Wheel Alignment</h4>
               <p className="text-gray-600 mb-4">
-                Specialized custom automotive work and modifications to meet your unique requirements.
+                Precision 4-wheel alignment to prevent uneven tire wear and improve your car's handling and fuel economy.
               </p>
-              <div className="text-accent font-medium">Personalized service</div>
+              <div className="flex items-center text-purple-600 font-medium">
+                <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+                </svg>
+                Precision guaranteed
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-green-50 to-white rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-green-100" data-testid="card-service-general">
+              <div className="text-green-600 text-3xl mb-4">
+                <Wrench className="w-12 h-12" />
+              </div>
+              <h4 className="text-xl font-semibold text-gray-900 mb-3">Oil Change & Maintenance</h4>
+              <p className="text-gray-600 mb-4">
+                Complete oil change service with filter replacement and comprehensive 21-point vehicle inspection.
+              </p>
+              <div className="flex items-center text-green-600 font-medium">
+                <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+                </svg>
+                Quick & reliable
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-indigo-50 to-white rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-indigo-100" data-testid="card-service-custom">
+              <div className="text-indigo-600 text-3xl mb-4">
+                <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"/>
+                </svg>
+              </div>
+              <h4 className="text-xl font-semibold text-gray-900 mb-3">AC & Heating Service</h4>
+              <p className="text-gray-600 mb-4">
+                Complete air conditioning and heating system repair, recharge, and maintenance for year-round comfort.
+              </p>
+              <div className="flex items-center text-indigo-600 font-medium">
+                <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clipRule="evenodd"/>
+                </svg>
+                Climate control experts
+              </div>
             </div>
           </div>
         </div>
